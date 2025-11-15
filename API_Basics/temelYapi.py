@@ -2,7 +2,7 @@ import requests  #? HTTP istekleri (GET, POST vb.) göndermek için kullanılır
 
 
 #! ==TOKEN OLMADAN API KULLANIMI (Temel yapı)==
-url = "https://api.collectapi.com/weather/getWeather"  #! API Aldığımız sayfanın adresi (API key değil)
+url = ""  #! API Aldığımız sayfanın adresi (API key değil)
 
 #? API’nin kabul ettiği parametreler burada dictionary (sözlük) olarak verilir. URL’in sonuna ?key1=val1&key2=val2 olarak eklenen değerlerin Python karşılığıdır. 
 #? Örnek: Bir hava durumu API’si “şehir” ve “dil” isterse, bunlar params içinde verilir.
@@ -30,7 +30,7 @@ print(data)
 
 
 #! ==TOKEN (API KEY) İLE API KULLANIMI==
-url = "https://api.collectapi.com/weather/getWeather"  
+url = ""  
 
 #? Aynı parametreleri tekrar kullanıyoruz
 params = {
@@ -41,7 +41,7 @@ params = {
 #? Token gerekiyorsa → headers içine eklenir.
 #? Format CollectAPI'de:    authorization: "apikey SENIN_KEYIN"
 headers = {
-    "authorization": "apikey 7Ac19FT2JWYeUn5FkQCXap:1X3nal4BYGB0gNtST2k3MI",
+    "authorization": "xxx",
     "content-type": "application/json"
 }
 
@@ -54,3 +54,4 @@ data = response.json()
 print("Tokenli API sonucu:")
 
 print(data)
+
