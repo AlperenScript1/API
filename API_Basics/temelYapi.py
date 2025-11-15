@@ -1,7 +1,7 @@
 import requests  #? HTTP istekleri (GET, POST vb.) göndermek için kullanılır
 
 
-#! ==TOKEN OLMADAN API KULLANIMI (En sade, temel yapı)==
+#! ==TOKEN OLMADAN API KULLANIMI (Temel yapı)==
 url = "https://api.collectapi.com/weather/getWeather"  #! API Aldığımız sayfanın adresi (API key değil)
 
 #? API’nin kabul ettiği parametreler burada dictionary (sözlük) olarak verilir. URL’in sonuna ?key1=val1&key2=val2 olarak eklenen değerlerin Python karşılığıdır. 
@@ -52,4 +52,5 @@ response = requests.get(url, params=params, headers=headers)
 data = response.json()
 
 print("Tokenli API sonucu:")
+
 print(data)
