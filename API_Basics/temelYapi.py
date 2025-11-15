@@ -52,7 +52,4 @@ response = requests.get(url, params=params, headers=headers)
 data = response.json()
 
 print("Tokenli API sonucu:")
-
 print(data)
-
-
