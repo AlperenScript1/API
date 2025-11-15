@@ -7,7 +7,7 @@ url = ""  #! API Aldığımız sayfanın adresi (API key değil)
 #? API’nin kabul ettiği parametreler burada dictionary (sözlük) olarak verilir. URL’in sonuna ?key1=val1&key2=val2 olarak eklenen değerlerin Python karşılığıdır. 
 #? Örnek: Bir hava durumu API’si “şehir” ve “dil” isterse, bunlar params içinde verilir.
 params = {
-    "city": "Ankara",   
+    "city": "Ankara", #! Her API'nin parametre isimleri farklı olabilir. Doğru isimler her zaman kendi dokümanından alınmalıdır.
     "lang": "tr"        
 }
 
@@ -54,4 +54,5 @@ data = response.json()
 print("Tokenli API sonucu:")
 
 print(data)
+
 
